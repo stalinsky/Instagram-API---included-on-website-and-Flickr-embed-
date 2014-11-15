@@ -1,0 +1,35 @@
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Треугольник</title>
+  <style>
+   .block {
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+   }
+   .block::before, .block::after {
+    content: ''; 
+    position: absolute;
+    left: 20px; bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid green;
+   }
+   .block::after {
+    border-top: 10px solid white;
+    bottom: -19px; 
+   }
+  </style>
+ </head>
+ <body>
+  <div class="block">
+   Lorem ipsum amet dollar<br>
+   Note: IE8 and Opera 4-6 only support the old, single-colon CSS2 syntax (:after). Newer versions support the standard, double-colon CSS3 syntax (::after).
+
+Note: For :after to work in IE8, a <!DOCTYPE> must be declared.
+  </div>
+ </body>
+</html>
